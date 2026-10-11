@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watch Full HD Video</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  padding: 48px 24px 32px;
+  border: 1px solid #eeeeee;
+  border-radius: 36px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0,0,0,.05);
+}
+
+.play {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  background: #374151;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  padding-left: 5px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 42px;
+  color: #111111;
+}
+
+.quality {
+  border: 1px solid #e5e7eb;
+  background: #f5f7fa;
+  padding: 22px 12px;
+  border-radius: 60px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 38px;
+}
+
+.check {
+  color: #16a34a;
+  font-size: 23px;
+}
+
+.info {
+  font-size: 16px;
+  color: #647080;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+.dot {
+  color: #2563eb;
+}
+
+.continue {
+  display: block;
+  width: 100%;
+  padding: 23px 10px;
+  border-radius: 60px;
+  background: #1e293b;
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 600;
+  box-shadow: 0 12px 25px rgba(0,0,0,.10);
+  transition: transform .2s;
+}
+
+.continue:active {
+  transform: scale(.97);
+}
+
+.footer {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 38px;
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: #475569;
+  font-size: 14px;
+}
+
+.blue {
+  color: #2563eb;
+}
+
+.yellow {
+  color: #f59e0b;
+}
+
+@media (max-width: 380px) {
+  .card {
+    padding: 35px 18px 25px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .continue {
+    font-size: 17px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="play">▶</div>
+
+  <h1>Watch Full HD Video</h1>
+
+  <div class="quality">
+    ▣ &nbsp; High-definition &nbsp;
+    <strong>1080p</strong>
+    <br>
+    <span class="check">✓</span>
+    <br>
+    Target quality: 1080p, if available
+  </div>
+
+  <div class="info">
+    <span class="dot">●</span>
+    Click the button below to continue.
+  </div>
+
+  <a class="continue"
+     href="https://example.com/video"
+     id="continueBtn">
+    Continue Watching &nbsp; ➜
+  </a>
+
+  <div class="footer">
+    <span><b class="blue">◆</b> Secure Connection</span>
+    <span><b class="yellow">ϟ</b> Fast Streaming</span>
+  </div>
+
+</div>
+
+<script>
+document.getElementById("continueBtn")
+.addEventListener("click", function(event) {
+  if (this.href.includes("example.com/video")) {
+    event.preventDefault();
+    alert("Ganti link video terlebih dahulu di index.html");
+  }
+});
+</script>
+
+</body>
+</html>
